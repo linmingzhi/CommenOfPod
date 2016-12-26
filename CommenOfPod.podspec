@@ -33,14 +33,14 @@ Pod::Spec.new do |s|
                    GIFHUD
                    DESC
 
-  s.homepage     = "https://github.com/linmingzhi/IOSCommen"
+  s.homepage     = "https://github.com/linmingzhi/CommenOfPod"
   s.license      = "MIT"
   s.author             = { "linmingzhi987" => "linmingzhi987@126.com" }
 
   s.platform     = :ios
   s.platform     = :ios, "8.0"
 
-  s.source       = { :git => "https://github.com/linmingzhi/IOSCommen.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/linmingzhi/CommenOfPod.git", :tag => "#{s.version}" }
 
   s.source_files  =  "Commen/**/*"
 #"ImageUtils/*.{h,m}"
