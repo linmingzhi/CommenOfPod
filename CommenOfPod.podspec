@@ -15,9 +15,9 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "IOSCommen"
-  s.version      = "0.0.1"
-  s.summary      = "IOSCommen 用来做一些简单共用的文件"
+  s.name         = "CommenOfPod"
+  s.version      = "0.0.2"
+  s.summary      = "CommenOfPod 用来做一些简单共用的文件"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -42,7 +42,7 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/linmingzhi/CommenOfPod.git", :tag => "#{s.version}" }
 
-  s.source_files  =  "Commen/**/*"
+  s.source_files  =   "Commen/Calendar/*" "Commen/Categray/*" "Commen/MD5/*" "Commen/Categray/*" "Commen/NavigationMenuView/*" "Commen/PullDownList/*" "Commen/UIViewExt/*"
 #"ImageUtils/*.{h,m}"
   s.exclude_files = "Commen/Exclude"
 
