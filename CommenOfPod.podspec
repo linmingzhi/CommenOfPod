@@ -15,9 +15,9 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "IOSCommen"
+  s.name         = "CommenOfPod"
   s.version      = "0.0.1"
-  s.summary      = "IOSCommen 用来做一些简单共用的文件"
+  s.summary      = "CommenOfPod 用来做一些简单共用的文件"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -33,14 +33,14 @@ Pod::Spec.new do |s|
                    GIFHUD
                    DESC
 
-  s.homepage     = "https://github.com/linmingzhi/IOSCommen"
+  s.homepage     = "https://github.com/linmingzhi/CommenOfPod"
   s.license      = "MIT"
   s.author             = { "linmingzhi987" => "linmingzhi987@126.com" }
 
   s.platform     = :ios
   s.platform     = :ios, "8.0"
 
-  s.source       = { :git => "https://github.com/linmingzhi/IOSCommen.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/linmingzhi/CommenOfPod.git", :tag => "#{s.version}" }
 
   s.source_files  =  "Commen/**/*"
 #"ImageUtils/*.{h,m}"
