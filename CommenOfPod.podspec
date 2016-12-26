@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "CommenOfPod"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "CommenOfPod 用来做一些简单共用的文件"
 
   # This description is used to generate tags and improve search results.
@@ -42,14 +42,11 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/linmingzhi/CommenOfPod.git", :tag => "#{s.version}" }
 
-#s.source_files  =   "Calendar/*", "Calendar/*.{h,m}" ,"Categray/*.{h,m}" , "MD5/*.{h,m}"  , "NavigationMenuView/*.{h,m}"  , "PullDownList/*.{h,m}"  , "UIViewExt/*.{h,m}"
-s.source_files  =   "Calendar", "Categray" , "MD5"  , "NavigationMenuView"  , "PullDownList"  , "UIViewExt"
-#"ImageUtils/*.{h,m}"
-  s.exclude_files = "Commen/Exclude"
+#s.source_files  =    "Calendar/*.{h,m}" ,"Categray/*.{h,m}" , "MD5/*.{h,m}"  , "NavigationMenuView/*.{h,m}"  , "PullDownList/*.{h,m}"  , "UIViewExt/*.{h,m}"
 
-# s.public_header_files = "Commen/**/*.h"
+#s.exclude_files = "Commen/Exclude"
 
-    s.public_header_files = "Calendar/*.h" ,"Categray/*.h" , "MD5/*.h"  , "NavigationMenuView/*.h"  , "PullDownList/*.h"  , "UIViewExt/*.h"
+#s.public_header_files = "Calendar/*.h" ,"Categray/*.h" , "MD5/*.h"  , "NavigationMenuView/*.h"  , "PullDownList/*.h"  , "UIViewExt/*.h"
 #"ImageUtils/*.h"
 
 #s.subspec 'ImageUtils' do |spec|
@@ -61,12 +58,14 @@ s.subspec 'Calendar' do |ss|
 
 ss.source_files = "Calendar/*"
 ss.public_header_files = "Calendar/*.h"
+ss.framework  = "UIKit"
 
 end
 
 s.subspec 'Categray' do |ss|
 ss.source_files = "Categray/*"
 ss.public_header_files = "Categray/*.h"
+ss.framework  = "UIKit"
 end
 
 s.subspec 'MD5' do |ss|
@@ -84,21 +83,23 @@ end
 
 s.subspec 'PullDownList' do |ss|
 
-ss.public_header_files = '"PullDownList/*"
-ss.source_files = "PullDownList/*.h"
+ss.source_files = "PullDownList/*"
+ss.public_header_files = "PullDownList/*.h"
+
 end
 
 s.subspec 'UIViewExt' do |ss|
 
-ss.public_header_files = "UIViewExt/*"
-ss.source_files = "UIViewExt/*.h"
+ss.source_files = "UIViewExt/*"
+ss.public_header_files = "UIViewExt/*.h"
 end
+
 
 
   # s.resource  = "icon.png"
   # s.resources = "Resources/*.png"
 
-  s.framework  = "UIKit"
+  s.framework  = "UIKit" ,"QuartzCore"
   # s.frameworks = "SomeFramework", "AnotherFramework"
 
   # s.library   = "iconv"
