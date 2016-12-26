@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "CommenOfPod"
-  s.version      = "1.0.1"
+  s.version      = "1.0.2"
   s.summary      = "CommenOfPod 用来做一些简单共用的文件"
 
   # This description is used to generate tags and improve search results.
@@ -48,11 +48,6 @@ Pod::Spec.new do |s|
 
 #s.public_header_files = "Calendar/*.h" ,"Categray/*.h" , "MD5/*.h"  , "NavigationMenuView/*.h"  , "PullDownList/*.h"  , "UIViewExt/*.h"
 #"ImageUtils/*.h"
-
-#s.subspec 'ImageUtils' do |spec|
-#spec.requires_arc            = false
-#spec.compiler_flags          = '-ObjC'
-#end
 
 s.subspec 'Calendar' do |ss|
 
@@ -94,6 +89,12 @@ ss.source_files = "UIViewExt/*"
 ss.public_header_files = "UIViewExt/*.h"
 end
 
+s.subspec 'ImageUtils' do |spec|
+ss.requires_arc            = false
+ss.compiler_flags          = '-ObjC'
+ss.source_files = "ImageUtils/*"
+ss.public_header_files = "ImageUtils/*.h"
+end
 
 
   # s.resource  = "icon.png"
