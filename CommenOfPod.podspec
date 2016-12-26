@@ -42,7 +42,7 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/linmingzhi/CommenOfPod.git", :tag => "#{s.version}" }
 
-  s.source_files  =   "Commen","Commen/Calendar/*.{h,m}" ,"Commen/Categray/*.{h,m}" , "Commen/MD5/*.{h,m}"  , "Commen/NavigationMenuView/*.{h,m}"  , "Commen/PullDownList/*.{h,m}"  , "Commen/UIViewExt/*.{h,m}"
+  s.source_files  =   "Commen","Commen/Calendar", "Commen/Calendar/*.{h,m}" ,"Commen/Categray/*.{h,m}" , "Commen/MD5/*.{h,m}"  , "Commen/NavigationMenuView/*.{h,m}"  , "Commen/PullDownList/*.{h,m}"  , "Commen/UIViewExt/*.{h,m}"
 #"ImageUtils/*.{h,m}"
   s.exclude_files = "Commen/Exclude"
 
