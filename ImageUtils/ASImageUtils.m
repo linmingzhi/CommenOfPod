@@ -67,7 +67,7 @@ CGFloat valueFromColor(UIColor * uicolor, int idx)
     CGFloat red, green, blue, alpha;
     red = green = blue = alpha = 0.0f;
     CGColorRef color = [uicolor CGColor];
-    int numComponents = CGColorGetNumberOfComponents(color);
+    size_t numComponents = CGColorGetNumberOfComponents(color);
     if (numComponents == 4)
     {
         const CGFloat *components = CGColorGetComponents(color);
@@ -485,7 +485,13 @@ UIColor * AlphaColor(UIColor * uicolor, CGFloat alpha)
         cr = color;//[UIColor darkGrayColor];
         CGContextSetFillColorWithColor(context, cr.CGColor);
         frame.origin.y += aSize.height/2 - 6;
-        [title drawInRect:frame withFont:[UIFont systemFontOfSize:14] lineBreakMode:0 alignment:NSTextAlignmentCenter];
+//        [title drawInRect:frame withFont:[UIFont systemFontOfSize:14] lineBreakMode:0 alignment:NSTextAlignmentCenter];
+        NSMutableParagraphStyle *textStyle = [[NSMutableParagraphStyle defaultParagraphStyle] mutableCopy];
+        textStyle.lineBreakMode = NSLineBreakByWordWrapping;
+        textStyle.alignment = NSTextAlignmentCenter;
+        [title drawInRect:frame
+             withAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14],
+                              NSParagraphStyleAttributeName:textStyle}];
     }
     UIImage * retImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
@@ -574,7 +580,8 @@ UIColor * AlphaColor(UIColor * uicolor, CGFloat alpha)
         CGContextSetTextDrawingMode(context, kCGTextFill);
         CGContextSetRGBFillColor(context, 1.0f, 1.0f, 1.0f, 1.0f);
         //[missingText drawAtPoint:CGPointMake(2, 2) withFont:[UIFont systemFontOfSize:10]];
-        [name drawAtPoint:CGPointMake(1, 1) withFont:[UIFont systemFontOfSize:10]];
+//        [name drawAtPoint:CGPointMake(1, 1) withFont:[UIFont systemFontOfSize:10]];
+        [name drawAtPoint:CGPointMake(1, 1) withAttributes:@{NSFontAttributeName: [UIFont systemFontOfSize:10.0]}];
     }
     
     retImage = UIGraphicsGetImageFromCurrentImageContext();
@@ -603,13 +610,18 @@ UIColor * AlphaColor(UIColor * uicolor, CGFloat alpha)
         CGContextSetTextDrawingMode(context, kCGTextFill);
         CGContextSetRGBFillColor(context, 1.0f, 1.0f, 1.0f, 1.0f);
         //[missingText drawAtPoint:CGPointMake(2, 2) withFont:[UIFont systemFontOfSize:10]];
-        [name drawAtPoint:CGPointMake(1, 1) withFont:[UIFont systemFontOfSize:10]];
+        //[name drawAtPoint:CGPointMake(1, 1) withFont:[UIFont systemFontOfSize:10]];
+        
+        [name drawAtPoint:CGPointMake(1, 1) withAttributes:@{NSFontAttributeName: [UIFont systemFontOfSize:10.0]}];
     }
     
     retImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     return retImage;
 }
+
+
+
 
 +(UIImage*)imageNamed:(NSString *)name 
 ifNotExistCreateImageWithSize:(CGSize)defaultSize 
@@ -657,7 +669,8 @@ ifNotExistCreateImageWithSize:(CGSize)defaultSize
         
         CGContextSetTextDrawingMode(context, kCGTextFill);
         CGContextSetRGBFillColor(context, 1.0f, 1.0f, 1.0f, 1.0f);
-        [name drawAtPoint:CGPointMake(frame.origin.x - 10, frame.origin.y-5) withFont:[UIFont systemFontOfSize:10]];
+//        [name drawAtPoint:CGPointMake(frame.origin.x - 10, frame.origin.y-5) withFont:[UIFont systemFontOfSize:10]];
+    [name drawAtPoint:CGPointMake(1, 1) withAttributes:@{NSFontAttributeName: [UIFont systemFontOfSize:10.0]}];
 //    }
     
     retImage = UIGraphicsGetImageFromCurrentImageContext();

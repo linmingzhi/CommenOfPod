@@ -89,9 +89,8 @@ ss.source_files = "UIViewExt/*"
 ss.public_header_files = "UIViewExt/*.h"
 end
 
-s.subspec 'ImageUtils' do |spec|
+s.subspec 'ImageUtils' do |ss|
 ss.requires_arc            = false
-ss.compiler_flags          = '-ObjC'
 ss.source_files = "ImageUtils/*"
 ss.public_header_files = "ImageUtils/*.h"
 end
