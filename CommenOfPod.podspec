@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "CommenOfPod"
-  s.version      = "0.0.4"
+  s.version      = "0.0.5"
   s.summary      = "CommenOfPod 用来做一些简单共用的文件"
 
   # This description is used to generate tags and improve search results.
@@ -42,11 +42,13 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/linmingzhi/CommenOfPod.git", :tag => "#{s.version}" }
 
-  s.source_files  =   "Commen","Commen/Calendar", "Commen/Calendar/*.{h,m}" ,"Commen/Categray/*.{h,m}" , "Commen/MD5/*.{h,m}"  , "Commen/NavigationMenuView/*.{h,m}"  , "Commen/PullDownList/*.{h,m}"  , "Commen/UIViewExt/*.{h,m}"
+  s.source_files  =    "Calendar/*.{h,m}" ,"Categray/*.{h,m}" , "MD5/*.{h,m}"  , "NavigationMenuView/*.{h,m}"  , "PullDownList/*.{h,m}"  , "UIViewExt/*.{h,m}"
 #"ImageUtils/*.{h,m}"
   s.exclude_files = "Commen/Exclude"
 
-  s.public_header_files = "Commen/**/*.h"
+# s.public_header_files = "Commen/**/*.h"
+
+    s.public_header_files = "Calendar/*.h" ,"Categray/*.h" , "MD5/*.h"  , "NavigationMenuView/*.h"  , "PullDownList/*.h"  , "UIViewExt/*.h"
 #"ImageUtils/*.h"
 
 #s.subspec 'ImageUtils' do |spec|
