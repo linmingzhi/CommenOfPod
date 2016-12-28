@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "CommenOfPod"
-  s.version      = "1.0.4"
+  s.version      = "1.0.5"
   s.summary      = "CommenOfPod 用来做一些简单共用的文件"
 
   # This description is used to generate tags and improve search results.
@@ -95,6 +95,25 @@ ss.source_files = "ImageUtils/*"
 ss.public_header_files = "ImageUtils/*.h"
 end
 
+s.subspec 'HttpTool' do |ss|
+ss.source_files = "HttpTool/*"
+ss.public_header_files = "HttpTool/*.h"
+
+
+end
+
+s.subspec 'Base' do |ss|
+ss.source_files = "Base/*"
+ss.public_header_files = "Base/*.h"
+ss.dependency "CommenOfPod/HttpTool"
+end
+
+s.subspec 'AppDelegate' do |ss|
+ss.source_files = "AppDelegate/*"
+ss.public_header_files = "AppDelegate/*.h"
+end
+
+
 
   # s.resource  = "icon.png"
   # s.resources = "Resources/*.png"
@@ -107,7 +126,7 @@ end
 
 
    s.requires_arc = true
-
+s.dependency    "AFNetworking"
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
 
