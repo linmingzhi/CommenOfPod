@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "CommenOfPod"
-  s.version      = "1.0.6"
+  s.version      = "1.0.7"
   s.summary      = "CommenOfPod 用来做一些简单共用的文件"
 
   # This description is used to generate tags and improve search results.
@@ -126,7 +126,8 @@ end
 
 
    s.requires_arc = true
-s.dependency    "AFNetworking"
+s.dependency    "AFNetworking","MJRefresh"
+
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
 
