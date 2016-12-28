@@ -9,9 +9,9 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-#import "MJRefreshComponent.h"
-#import "MJRefreshNormalHeader.h"
-#import "MJRefreshAutoNormalFooter.h"
+//#import "MJRefreshComponent.h"
+//#import "MJRefreshNormalHeader.h"
+//#import "MJRefreshAutoNormalFooter.h"
 
 #define CommonFont 14
 #define CommonLineColor KColor(246, 246, 246, 1.0)
@@ -36,7 +36,7 @@
 
 +(UITableView*)maketableWithFrame:(CGRect)rect tableStyle:(UITableViewStyle)tableStyle separatorStyle:(UITableViewCellSeparatorStyle)separatorStyle delegateTo:(id)className backColor:(UIColor*)backColor;
 
-+(NSDictionary *)getDateFromUrl:(NSURL *)url;
+//+(NSDictionary *)getDateFromUrl:(NSURL *)url;
 +(UIButton*)makeButtonWithFranme:(CGRect)frame imageName:(NSString*)imageName Title:(NSString*)title target:(id)target Action:(SEL)action type:(UIButtonType)btnType titleColor:(UIColor*)color;
 
 + (NSAttributedString *)setLabelTextColor1:(UIColor*)color1 andColor2:(UIColor*)color2 part1String:(NSString *)string1 part2String:(NSString *)string2 andFont1:(UIFont*)font1 andFont2:(UIFont*)font2;
@@ -47,11 +47,11 @@
 
 + (UIImage*) createImageWithColor: (UIColor*) color;
 
-+ (void)showMessage:(NSString *)message;
+//+ (void)showMessage:(NSString *)message;
 
 + (NSString *) decimalwithFormat:(NSString *)format  floatV:(float)floatV;
 
-+ (MJRefreshNormalHeader *)tableviewHeader:(MJRefreshComponentRefreshingBlock)refreshingBlock;
-+ (MJRefreshAutoNormalFooter *)tableviewFooter:(MJRefreshComponentRefreshingBlock)refreshingBlock;
+//+ (MJRefreshNormalHeader *)tableviewHeader:(MJRefreshComponentRefreshingBlock)refreshingBlock;
+//+ (MJRefreshAutoNormalFooter *)tableviewFooter:(MJRefreshComponentRefreshingBlock)refreshingBlock;
 
 @end

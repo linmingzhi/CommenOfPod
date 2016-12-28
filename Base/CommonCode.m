@@ -189,40 +189,40 @@
    return theImage;
 }
 
-+ (void)showMessage:(NSString *)message
-{
-   
-   UIWindow * window = [UIApplication sharedApplication].keyWindow;
-   UIView *showview =  [[UIView alloc]init];
-   showview.backgroundColor = [UIColor blackColor];
-   showview.frame = CGRectMake(1, 1, 1, 1);
-   showview.alpha = 0.8f;
-   showview.layer.cornerRadius = 5.0f;
-   showview.layer.masksToBounds = YES;
-   [window addSubview:showview];
-   
-   UILabel *label = [[UILabel alloc]init];
-   /*
-    CGSize LabelSize = [message sizeWithFont:[UIFont systemFontOfSize:17] constrainedToSize:CGSizeMake(290, 9000)];
-    */
-   
-   label.frame = CGRectMake(10, 5, [MyTools getWidthWithString:message height:25 font:14].width + 10, 25);
-   label.text = message;
-   label.textColor = [UIColor whiteColor];
-   label.textAlignment = 0;
-   label.backgroundColor = [UIColor clearColor];
-   label.font = [UIFont boldSystemFontOfSize:14];
-   [showview addSubview:label];
-   
-   
-   showview.frame = CGRectMake((KScreenWidth - label.width - 10)/2, CGRectGetHeight(window.frame) - 150, label.width+10, label.height+10);
-   [UIView animateWithDuration:5 animations:^{
-      showview.alpha = 0;
-   } completion:^(BOOL finished) {
-      [showview removeFromSuperview];
-   }];
-   
-}//显示正在开发的提示信息
+//+ (void)showMessage:(NSString *)message
+//{
+//   
+//   UIWindow * window = [UIApplication sharedApplication].keyWindow;
+//   UIView *showview =  [[UIView alloc]init];
+//   showview.backgroundColor = [UIColor blackColor];
+//   showview.frame = CGRectMake(1, 1, 1, 1);
+//   showview.alpha = 0.8f;
+//   showview.layer.cornerRadius = 5.0f;
+//   showview.layer.masksToBounds = YES;
+//   [window addSubview:showview];
+//   
+//   UILabel *label = [[UILabel alloc]init];
+//   /*
+//    CGSize LabelSize = [message sizeWithFont:[UIFont systemFontOfSize:17] constrainedToSize:CGSizeMake(290, 9000)];
+//    */
+//   
+//   label.frame = CGRectMake(10, 5, [MyTools getWidthWithString:message height:25 font:14].width + 10, 25);
+//   label.text = message;
+//   label.textColor = [UIColor whiteColor];
+//   label.textAlignment = 0;
+//   label.backgroundColor = [UIColor clearColor];
+//   label.font = [UIFont boldSystemFontOfSize:14];
+//   [showview addSubview:label];
+//   
+//   
+//   showview.frame = CGRectMake((KScreenWidth - label.width - 10)/2, CGRectGetHeight(window.frame) - 150, label.width+10, label.height+10);
+//   [UIView animateWithDuration:5 animations:^{
+//      showview.alpha = 0;
+//   } completion:^(BOOL finished) {
+//      [showview removeFromSuperview];
+//   }];
+//   
+//}//显示正在开发的提示信息
 
 //格式话小数 四舍五入类型
 + (NSString *) decimalwithFormat:(NSString *)format  floatV:(float)floatV
@@ -234,24 +234,24 @@
    return  [numberFormatter stringFromNumber:[NSNumber numberWithFloat:floatV]];
 }
 
-+ (MJRefreshNormalHeader *)tableviewHeader:(MJRefreshComponentRefreshingBlock)refreshingBlock{
-    MJRefreshNormalHeader *header = [MJRefreshNormalHeader headerWithRefreshingBlock:refreshingBlock];
-    
-    [header setTitle:@"下拉可以刷新了" forState:MJRefreshStateWillRefresh];
-    [header setTitle:@"松开马上刷新了" forState:MJRefreshStateRefreshing];
-    [header setTitle:@"正在帮你刷新中" forState:MJRefreshStatePulling];
-    
-    
-    return header;
-}
-
-+ (MJRefreshAutoNormalFooter *)tableviewFooter:(MJRefreshComponentRefreshingBlock)refreshingBlock{
-    MJRefreshAutoNormalFooter *footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:refreshingBlock];
-    [footer setTitle:@"上拉可以加载更多数据了" forState:MJRefreshStateWillRefresh];
-    [footer setTitle:@"松开马上加载更多数据了" forState:MJRefreshStateRefreshing];
-    [footer setTitle:@"正在帮你加载中" forState:MJRefreshStatePulling];
-    return footer;
-}
+//+ (MJRefreshNormalHeader *)tableviewHeader:(MJRefreshComponentRefreshingBlock)refreshingBlock{
+//    MJRefreshNormalHeader *header = [MJRefreshNormalHeader headerWithRefreshingBlock:refreshingBlock];
+//    
+//    [header setTitle:@"下拉可以刷新了" forState:MJRefreshStateWillRefresh];
+//    [header setTitle:@"松开马上刷新了" forState:MJRefreshStateRefreshing];
+//    [header setTitle:@"正在帮你刷新中" forState:MJRefreshStatePulling];
+//    
+//    
+//    return header;
+//}
+//
+//+ (MJRefreshAutoNormalFooter *)tableviewFooter:(MJRefreshComponentRefreshingBlock)refreshingBlock{
+//    MJRefreshAutoNormalFooter *footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:refreshingBlock];
+//    [footer setTitle:@"上拉可以加载更多数据了" forState:MJRefreshStateWillRefresh];
+//    [footer setTitle:@"松开马上加载更多数据了" forState:MJRefreshStateRefreshing];
+//    [footer setTitle:@"正在帮你加载中" forState:MJRefreshStatePulling];
+//    return footer;
+//}
 
 
 @end
