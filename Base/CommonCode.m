@@ -24,7 +24,7 @@
     textField.autocapitalizationType = autoCapital;
     textField.returnKeyType = returnKey;
     textField.delegate = className;
-    return [textField autorelease];
+    return textField;
 }
 
 +(UIButton*)makeButtonWithFranme:(CGRect)frame imageName:(NSString*)imageName Title:(NSString*)title target:(id)target Action:(SEL)action type:(UIButtonType)btnType titleColor:(UIColor*)color btnTag:(int)tag titleFont:(UIFont *)font user:(BOOL)userEnable
@@ -53,7 +53,7 @@
     label.text=text;
     label.textColor = textColor;
     label.backgroundColor =backColor;
-    return [label autorelease];
+    return label ;
     
 }
 
@@ -63,7 +63,7 @@
     view.frame=frame;
     view.tag = tag;
     view.backgroundColor = color;
-    return [view autorelease];
+    return view ;
 }
 
 +(UIImageView*)makeImageViewWithFrame:(CGRect)frame imageName:(NSString*)imageName backColor:(UIColor*)backColor
@@ -72,7 +72,7 @@
     imageview.image=[UIImage imageNamed:imageName];
     imageview.userInteractionEnabled=YES;
     imageview.backgroundColor = backColor;
-    return [imageview autorelease] ;
+    return imageview  ;
 }
 
 +(UIScrollView*)makeScrollViewWithFrame:(CGRect)frame andSize:(CGSize)size isPage:(BOOL)isPage horizonIndicator:(BOOL)horizon verticalIndicator:(BOOL)vertical backColor:(UIColor*)backColor
@@ -85,7 +85,7 @@
     scrollView.showsVerticalScrollIndicator = vertical;
     scrollView.scrollsToTop = NO;
     scrollView.backgroundColor = backColor;
-    return [scrollView autorelease];
+    return scrollView;
 }
 
 +(UIPageControl*)makePageControlWithFrame:(CGRect)frame numOfPage:(int)num currentPage:(int)currentPage
@@ -93,7 +93,7 @@
     UIPageControl *pageControl = [[UIPageControl alloc] initWithFrame:frame];
     pageControl.numberOfPages = num;
     pageControl.currentPage = currentPage;
-    return [pageControl autorelease];
+    return pageControl ;
 }
 
 +(UISlider*)makeSliderWithFrame:(CGRect)rect AndImage:(UIImage*)image
@@ -106,7 +106,7 @@
     slider.minimumTrackTintColor = [UIColor yellowColor];
     slider.continuous = YES;
     slider.enabled = YES;
-    return [slider autorelease];
+    return slider ;
 }
 
 +(UITableView*)maketableWithFrame:(CGRect)rect tableStyle:(UITableViewStyle)tableStyle separatorStyle:(UITableViewCellSeparatorStyle)separatorStyle delegateTo:(id)className backColor:(UIColor*)backColor
@@ -116,7 +116,7 @@
     table.delegate = className;
     table.dataSource = className;
     table.backgroundColor = backColor;
-    return [table autorelease];
+    return table;
 }
 +(UIButton*)makeButtonWithFranme:(CGRect)frame imageName:(NSString*)imageName Title:(NSString*)title target:(id)target Action:(SEL)action type:(UIButtonType)btnType titleColor:(UIColor*)color
 {

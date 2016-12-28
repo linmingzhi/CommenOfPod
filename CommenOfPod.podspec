@@ -126,7 +126,8 @@ end
 
 
    s.requires_arc = true
-s.dependency    "AFNetworking","MJRefresh"
+s.dependency    "AFNetworking"
+s.dependency     "MJRefresh"
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
