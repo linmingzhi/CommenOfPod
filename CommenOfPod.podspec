@@ -96,14 +96,15 @@ ss.public_header_files = "ImageUtils/*.h"
 end
 
 
-s.subspec 'AppDelegate' do |ss|
-ss.source_files = "AppDelegate/*"
-ss.public_header_files = "AppDelegate/*.h"
-end
+#s.subspec 'AppDelegate' do |ss|
+#ss.source_files = "AppDelegate/*"
+#ss.public_header_files = "AppDelegate/*.h"
+#end
 
 s.subspec 'SDAutoLayout' do |ss|
 ss.source_files = "SDAutoLayout/*"
 ss.public_header_files = "SDAutoLayout/*.h"
+
 end
 
 
@@ -119,8 +120,8 @@ end
 
 
    s.requires_arc = true
-s.dependency    "AFNetworking"
-s.dependency     "MJRefresh"
+#s.dependency    "AFNetworking"
+#s.dependency     "MJRefresh"
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
