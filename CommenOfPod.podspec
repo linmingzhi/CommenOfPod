@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "CommenOfPod"
-  s.version      = "1.0.8"
+  s.version      = "1.0.9"
   s.summary      = "CommenOfPod 用来做一些简单共用的文件"
 
   # This description is used to generate tags and improve search results.
@@ -111,6 +111,11 @@ end
 s.subspec 'AppDelegate' do |ss|
 ss.source_files = "AppDelegate/*"
 ss.public_header_files = "AppDelegate/*.h"
+end
+
+s.subspec 'SDAutoLayout' do |ss|
+ss.source_files = "SDAutoLayout/*"
+ss.public_header_files = "SDAutoLayout/*.h"
 end
 
 
